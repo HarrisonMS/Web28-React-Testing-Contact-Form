@@ -2,19 +2,23 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState()
+
+  console.log(data)
   const { register, errors, handleSubmit, reset } = useForm({
     mode: "onBlur"
   });
   const onSubmit = data => {
     setData(data);
+    reset()
   };
+  const clearData = () => setData('')
 
 
   return (
     <div >
       <h1>It's A Form</h1>
-      <form onSubmit={handleSubmit(onSubmit)} reset={reset}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="firstName">First Name*</label>
           <input
@@ -66,7 +70,7 @@ const ContactForm = () => {
           </pre>
         )}
         <button type="submit">Submit!</button>
-        {/* <input type="reset"/> */}
+        <button onClick={clearData}>Clear</button>
       </form>
     </div>
   );
