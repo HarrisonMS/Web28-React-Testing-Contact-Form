@@ -55,9 +55,29 @@ label {
   font-size: 14px;
   font-weight: 200;
 }
-
-button[type="submit"],
-input[type="submit"] {
+button {
+  background: #ec5990;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 40px;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 10px;
+  width: 100%;
+}
+button:hover {
+  background: #bf1650;
+}
+button:active {
+  transition: 0.3s all;
+  transform: translateY(3px);
+  border: 1px solid transparent;
+  opacity: 0.8;
+}
+/* button[type="submit"],[type="reset"],
+input[type="submit"],[type="reset"] {
   background: #ec5990;
   color: white;
   text-transform: uppercase;
@@ -67,13 +87,15 @@ input[type="submit"] {
   font-size: 16px;
   font-weight: 100;
   letter-spacing: 10px;
-}
+} */
 
-button[type="submit"]:hover,
+/* button[type="submit"],[type="reset"]:hover,
 input[type="submit"]:hover {
   background: #bf1650;
-}
+} */
 
+
+/* 
 button[type="submit"]:active,
 input[type="button"]:active,
 input[type="submit"]:active {
@@ -81,7 +103,7 @@ input[type="submit"]:active {
   transform: translateY(3px);
   border: 1px solid transparent;
   opacity: 0.8;
-}
+} */
 
 input:disabled {
   opacity: 0.4;
@@ -102,7 +124,7 @@ input[type="submit"] {
   margin: 0 auto;
 }
 
-button[type="button"] {
+/* button[type="button"] {
   display: block;
   appearance: none;
   background: #333;
@@ -111,17 +133,20 @@ button[type="button"] {
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 4px;
-}
+} */
 
 pre {
   color: white;
+  overflow: auto;
+  max-width: 100%;
+
 }
 
 hr {
   margin-top: 30px;
 }
 
-button {
+/* button {
   display: block;
   appearance: none;
   margin-top: 40px;
@@ -130,4 +155,4 @@ button {
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 4px;
-}
+} */
